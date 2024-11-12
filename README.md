@@ -1,7 +1,8 @@
+[img]
 # super-rentals
 
 This README outlines the details of collaborating on this Ember application.
-This is the Ember tutorial called SuperRentals.  
+This is the Ember tutorial called SuperRentals from [here](https://guides.emberjs.com/release/tutorial/part-1/).  
 
 ## Prerequisites
 
