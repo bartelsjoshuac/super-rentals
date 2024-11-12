@@ -1,7 +1,7 @@
 # super-rentals
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the Ember tutorial called SuperRentals.  
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+Compiled code is available via /dist
 
 ## Further Reading / Useful Links
 
@@ -53,4 +53,5 @@ Specify what it takes to deploy your app.
 - [ember-cli](https://cli.emberjs.com/release/)
 - Development Browser Extensions
   - [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+  - [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)  
+- [The tutorial used for this exercise](https://guides.emberjs.com/release/tutorial/part-1/)
