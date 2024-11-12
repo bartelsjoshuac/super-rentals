@@ -1,47 +1,37 @@
-name: CI
+name: Build SuperRentals Ember App
 
 on:
   push:
-    branches:
-      - main
-      - master
-  pull_request: {}
-
-concurrency:
-  group: ci-${{ github.head_ref || github.ref }}
-  cancel-in-progress: true
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  lint:
-    name: "Lint"
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
-      - name: Install Dependencies
-        run: npm ci
-      - name: Lint
-        run: npm run lint
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-  test:
-    name: "Test"
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Specify the Node.js version
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Install Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: npm
-      - name: Install Dependencies
-        run: npm ci
-      - name: Run Tests
-        run: npm test
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Ember app
+      run: ember build --environment=production
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: ember-dist
+        path: dist/
+   - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
