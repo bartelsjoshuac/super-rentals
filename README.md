@@ -1,4 +1,4 @@
-![Hamster](image_url)
+![Hamster](https://github.com/bartelsjoshuac/super-rentals/blob/master/hamster.png)
 # super-rentals
 
 This README outlines the details of collaborating on this Ember application.
