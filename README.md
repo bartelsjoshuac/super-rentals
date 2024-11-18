@@ -1,7 +1,7 @@
 ![Hamster](https://github.com/bartelsjoshuac/super-rentals/blob/master/ember-tomster.png)
 # super-rentals
 
-This was created for me by Ember I guess.
+This was created for me by Ember I guess.  I didn't make changes to it.
 
 This README outlines the details of collaborating on this Ember application.
 This is the Ember tutorial called SuperRentals from [here](https://guides.emberjs.com/release/tutorial/part-1/).  
